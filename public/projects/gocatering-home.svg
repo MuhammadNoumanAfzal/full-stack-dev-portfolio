@@ -1,0 +1,34 @@
+﻿<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#fff8f2"/>
+  <text x="55" y="75" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#d66532">GO</text>
+  <text x="105" y="75" font-family="Arial, sans-serif" font-size="21" font-weight="800" fill="#d66532">CATERING</text>
+  <rect x="940" y="45" width="105" height="38" rx="19" fill="#cf6232"/>
+  <text x="974" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">Logg inn</text>
+  <text x="1085" y="70" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#3e3935">Kontakt oss</text>
+  <text x="55" y="250" font-family="Arial, sans-serif" font-size="58" font-weight="900" fill="#16110f">Bestill catering fra din</text>
+  <text x="55" y="315" font-family="Arial, sans-serif" font-size="58" font-weight="900" fill="#16110f">favorittleverandor i</text>
+  <text x="55" y="380" font-family="Arial, sans-serif" font-size="58" font-weight="900" fill="#16110f">hele Norge</text>
+  <rect x="55" y="420" width="210" height="56" rx="12" fill="#fff" stroke="#ead3c6"/>
+  <text x="95" y="455" font-family="Arial, sans-serif" font-size="16" fill="#b9aaa2">Skriv inn leveringsadr</text>
+  <rect x="280" y="420" width="210" height="56" rx="12" fill="#fff" stroke="#ead3c6"/>
+  <text x="315" y="455" font-family="Arial, sans-serif" font-size="16" fill="#b9aaa2">Legg til postnummer</text>
+  <rect x="505" y="420" width="130" height="56" rx="12" fill="#dd6b35"/>
+  <text x="552" y="455" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff">Sok</text>
+  <rect x="55" y="495" width="225" height="55" rx="14" fill="#fff" stroke="#ead3c6"/>
+  <circle cx="92" cy="522" r="17" fill="#dd6b35"/>
+  <text x="122" y="515" font-family="Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="3" fill="#dd6b35">UTFORSK</text>
+  <text x="122" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#16110f">Se alle leverandorer</text>
+  <circle cx="860" cy="355" r="125" fill="#f5eee8"/>
+  <circle cx="860" cy="355" r="105" fill="#fff" stroke="#ead3c6" stroke-width="3"/>
+  <circle cx="860" cy="355" r="86" fill="#e8c19d"/>
+  <path d="M795 315 C825 270 900 275 925 325 C960 395 890 445 830 420 C780 400 765 350 795 315Z" fill="#f1d0a6"/>
+  <circle cx="825" cy="350" r="12" fill="#6fa35c"/><circle cx="875" cy="330" r="10" fill="#6fa35c"/><circle cx="900" cy="380" r="11" fill="#cb3f30"/><circle cx="835" cy="395" r="9" fill="#f2bb35"/><circle cx="885" cy="400" r="8" fill="#7c3d87"/>
+  <rect x="932" y="445" width="225" height="80" rx="15" fill="#d85f25"/>
+  <line x1="1007" y1="458" x2="1007" y2="512" stroke="#f5c0a5"/><line x1="1084" y1="458" x2="1084" y2="512" stroke="#f5c0a5"/>
+  <text x="955" y="486" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">Lokale</text><text x="945" y="502" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">leverandorer</text>
+  <text x="1025" y="486" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">Ferske</text><text x="1018" y="502" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">ravarer</text>
+  <text x="1100" y="486" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">Levering</text><text x="1095" y="502" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">i hele Norge</text>
+  <circle cx="750" cy="290" r="62" fill="#ffe4d6" stroke="#fff" stroke-width="5"/>
+  <text x="710" y="306" font-family="Arial, sans-serif" font-size="12" font-weight="800" fill="#38251d">FERSKE MALTIDER</text>
+  <text x="720" y="322" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#38251d">LEVERT PA TID</text>
+</svg>

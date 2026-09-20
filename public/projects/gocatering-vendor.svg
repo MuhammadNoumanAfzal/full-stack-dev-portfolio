@@ -1,0 +1,28 @@
+﻿<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#f4f0ec"/>
+  <rect width="210" height="760" fill="#c95e2e"/>
+  <rect x="18" y="18" width="174" height="115" rx="18" fill="#df7b4b" opacity=".75"/>
+  <text x="43" y="64" font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="#fff">GO</text><text x="85" y="64" font-family="Arial, sans-serif" font-size="18" font-weight="900" fill="#fff">CATERING</text>
+  <text x="30" y="112" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">Leverandorpanel</text>
+  <rect x="16" y="158" width="178" height="44" rx="10" fill="#fff4ee"/>
+  <text x="58" y="186" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#d45f2f">Oversikt</text>
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff"><text x="58" y="238">Bestillinger</text><text x="58" y="286">Meny</text><text x="58" y="334">Levering</text><text x="58" y="382">Okonomi</text><text x="58" y="430">Anmeldelser</text><text x="58" y="478">Varsler</text><text x="58" y="526">Support</text></g>
+  <rect x="210" y="0" width="990" height="70" fill="#fff"/>
+  <rect x="245" y="15" width="460" height="42" rx="21" fill="#eef1f5"/>
+  <text x="285" y="42" font-family="Arial, sans-serif" font-size="16" fill="#a2aab6">Sok i bestillinger, menyer eller kunder...</text>
+  <text x="230" y="132" font-family="Arial, sans-serif" font-size="34" font-weight="900" fill="#050505">Oversikt</text>
+  <rect x="358" y="96" width="155" height="42" rx="12" fill="#fff" stroke="#d9c8bc"/>
+  <text x="392" y="123" font-family="Arial, sans-serif" font-size="15" fill="#2d2520">Siste 7 dager</text>
+  <text x="230" y="168" font-family="Arial, sans-serif" font-size="16" fill="#111">Velkommen tilbake, Christer. Slik gar det med virksomheten din i dag.</text>
+  <g font-family="Arial, sans-serif"><rect x="230" y="192" width="230" height="145" rx="10" fill="#fff" stroke="#ddd1ca"/><text x="245" y="268" font-size="15" fill="#3b312c">Totale bestillinger</text><text x="245" y="308" font-size="34" font-weight="900" fill="#111">3</text><rect x="475" y="192" width="230" height="145" rx="10" fill="#fff" stroke="#ddd1ca"/><text x="490" y="268" font-size="15" fill="#3b312c">Kommende (neste 4 t)</text><text x="490" y="308" font-size="34" font-weight="900" fill="#111">0</text><rect x="720" y="192" width="230" height="145" rx="10" fill="#fff" stroke="#ddd1ca"/><text x="735" y="268" font-size="15" fill="#3b312c">Haster</text><text x="735" y="308" font-size="34" font-weight="900" fill="#111">0</text><rect x="965" y="192" width="215" height="145" rx="10" fill="#fff" stroke="#ddd1ca"/><text x="980" y="268" font-size="15" fill="#3b312c">Kapasitetsutnyttelse</text><text x="980" y="308" font-size="34" font-weight="900" fill="#111">20%</text></g>
+  <rect x="230" y="356" width="950" height="85" rx="10" fill="#fff" stroke="#ddd1ca"/>
+  <text x="245" y="390" font-family="Arial, sans-serif" font-size="23" font-weight="900" fill="#111">Nye bestillingsforesporsler</text>
+  <text x="245" y="425" font-family="Arial, sans-serif" font-size="16" fill="#6f625b">Ingen nye bestillingsforesporsler trenger en avgjorelse akkurat na.</text>
+  <rect x="230" y="458" width="505" height="210" rx="10" fill="#fff" stroke="#ddd1ca"/>
+  <text x="245" y="492" font-family="Arial, sans-serif" font-size="23" font-weight="900" fill="#111">Hurtighandlinger</text>
+  <rect x="248" y="515" width="470" height="40" rx="6" fill="#fff" stroke="#d4cec9"/><rect x="248" y="566" width="470" height="40" rx="6" fill="#fff" stroke="#d4cec9"/><rect x="248" y="617" width="470" height="40" rx="6" fill="#fff" stroke="#d4cec9"/>
+  <rect x="755" y="458" width="425" height="210" rx="10" fill="#fff" stroke="#ddd1ca"/>
+  <text x="770" y="492" font-family="Arial, sans-serif" font-size="23" font-weight="900" fill="#111">Kjokkenstatus</text>
+  <rect x="775" y="535" width="125" height="92" rx="5" fill="#f2f7ff" stroke="#adc9ff"/><rect x="915" y="535" width="125" height="92" rx="5" fill="#effcf2" stroke="#b9e5c1"/><rect x="1055" y="535" width="105" height="92" rx="5" fill="#fff7ed" stroke="#f2cb96"/>
+  <text x="790" y="585" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#111">1</text><text x="930" y="585" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#111">0</text><text x="1070" y="585" font-family="Arial, sans-serif" font-size="32" font-weight="900" fill="#111">0</text>
+</svg>

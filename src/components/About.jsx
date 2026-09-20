@@ -1,0 +1,336 @@
+﻿import { useState } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
+
+import {
+  GraduationCap,
+  BriefcaseBusiness,
+  Code2,
+  Wrench,
+  Calendar,
+  MapPin,
+  ExternalLink,
+  CheckCircle2,
+} from "lucide-react";
+
+import {
+  SiReact,  SiTailwindcss,  SiGithub,
+  SiVercel,
+  SiNodedotjs,
+  SiExpress,
+  SiLaravel,
+  SiPhp,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiStripe,
+  SiPaypal,
+  SiRedux,
+  SiNextdotjs,
+} from "react-icons/si";
+
+import BorderGlow from "../components/BorderGlow";
+
+const tabs = [
+  { id: "education", label: "Education", icon: GraduationCap },
+  { id: "experience", label: "Work Experience", icon: BriefcaseBusiness },
+  { id: "skills", label: "Skills", icon: Code2 },
+  { id: "tools", label: "Tools & Technologies", icon: Wrench },
+];
+
+const skills = [
+  { name: "React.js", level: "Advanced", percentage: 92, icon: SiReact },
+  { name: "Node.js / Express", level: "Advanced", percentage: 88, icon: SiNodedotjs },
+  { name: "Laravel / PHP", level: "Advanced", percentage: 84, icon: SiLaravel },
+  { name: "REST APIs", level: "Advanced", percentage: 90, icon: Code2 },
+  { name: "MongoDB", level: "Advanced", percentage: 86, icon: SiMongodb },
+  { name: "MySQL / PostgreSQL", level: "Advanced", percentage: 84, icon: SiPostgresql },
+];
+
+const tools = [
+  { name: "React.js", category: "Frontend", icon: SiReact },
+  { name: "Next.js", category: "Framework", icon: SiNextdotjs },
+  { name: "Redux", category: "State", icon: SiRedux },
+  { name: "Tailwind CSS", category: "Styling", icon: SiTailwindcss },
+  { name: "Node.js", category: "Backend", icon: SiNodedotjs },
+  { name: "Express.js", category: "Backend", icon: SiExpress },
+  { name: "Laravel", category: "Backend", icon: SiLaravel },
+  { name: "PHP", category: "Language", icon: SiPhp },
+  { name: "MongoDB", category: "Database", icon: SiMongodb },
+  { name: "MySQL", category: "Database", icon: SiMysql },
+  { name: "PostgreSQL", category: "Database", icon: SiPostgresql },
+  { name: "Stripe", category: "Payments", icon: SiStripe },
+  { name: "PayPal", category: "Payments", icon: SiPaypal },
+  { name: "Git / GitHub", category: "Workflow", icon: SiGithub },
+  { name: "Vercel", category: "Deployment", icon: SiVercel },
+];
+
+const contentVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
+};
+
+const glowProps = {
+  edgeSensitivity: 25,
+  glowColor: "200 90 65",
+  backgroundColor: "#0B0E13",
+  borderRadius: 18,
+  glowRadius: 30,
+  glowIntensity: 0.7,
+  coneSpread: 30,
+  animated: false,
+  colors: ["#2563EB", "#22D3EE", "#3B82F6"],
+  fillOpacity: 0.25,
+};
+
+const About = () => {
+  const [activeTab, setActiveTab] = useState("experience");
+
+  return (
+    <section id="about" className="relative overflow-hidden bg-[#08090B] px-4 py-10 text-white sm:px-6 sm:py-12 md:px-8 md:py-14 lg:py-16 xl:py-20">
+      <div className="pointer-events-none absolute left-0 top-1/4 h-[220px] w-[220px] rounded-full bg-blue-500/[0.05] blur-[100px] sm:h-[280px] sm:w-[280px] md:h-[350px] md:w-[350px] md:blur-[130px]" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[200px] w-[200px] rounded-full bg-cyan-400/[0.04] blur-[90px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px] md:blur-[120px]" />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
+        <motion.div initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="mb-6 text-center sm:mb-7 md:mb-8">
+          <div className="mx-auto mb-2.5 flex w-fit items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/[0.06] px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-blue-300 sm:mb-3 sm:text-[10px] sm:tracking-[0.2em]">
+            <Code2 size={13} />
+            About Me
+          </div>
+
+          <h2 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+            Full-stack systems built with <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">business logic.</span>
+          </h2>
+
+          <p className="mx-auto mt-2.5 max-w-2xl px-2 text-xs leading-6 text-slate-400 sm:mt-3 sm:px-0 sm:text-sm sm:leading-7 md:text-base">
+            I build production web platforms across MERN and Laravel/PHP, including marketplaces, booking and payment flows, admin dashboards, REST APIs, and automation workflows for real client businesses.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-7 xl:grid-cols-[280px_minmax(0,1fr)] xl:gap-8">
+          <motion.div initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="w-full">
+            <BorderGlow {...glowProps} className="w-full">
+              <div className="rounded-[17px] bg-[#0B0E13] p-4 sm:p-5 md:p-6 lg:p-5">
+                <div className="relative mx-auto flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-blue-400/20 bg-blue-500/[0.08] sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-28 lg:w-28 xl:h-32 xl:w-32">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-cyan-400/10" />
+                  <img src="/nouman.JPG" alt="Muhammad Nouman Afzal" className="relative h-full w-full object-cover object-center" />
+                </div>
+
+                <div className="mt-4 text-center sm:mt-5">
+                  <h3 className="text-base font-semibold text-white sm:text-lg">Muhammad Nouman Afzal</h3>
+                  <p className="mt-1 font-mono text-[11px] text-cyan-400 sm:text-xs">Full-Stack Developer</p>
+                </div>
+
+                <div className="mt-4 flex items-center justify-center gap-2 text-[11px] text-slate-500 sm:mt-5 sm:text-xs">
+                  <MapPin size={14} className="shrink-0 text-blue-400" />
+                  Punjab, Pakistan
+                </div>
+
+                <div className="mt-4 border-t border-white/[0.07] pt-4 sm:mt-5 sm:pt-5">
+                  <p className="text-center text-[11px] leading-5 text-slate-500 sm:text-xs sm:leading-6">
+                    MERN Stack Developer at Exlon Tech, with 10+ deployed client applications across marketplace, education, consultancy, and automation domains.
+                  </p>
+                </div>
+              </div>
+            </BorderGlow>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, x: 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.1 }} className="min-w-0 w-full">
+            <div className="mb-4 w-full overflow-x-auto rounded-xl border border-white/[0.08] bg-white/[0.025] p-1 sm:mb-5 sm:p-1.5 md:mb-6">
+              <div className="flex min-w-max gap-1">
+                {tabs.map((tab) => {
+                  const Icon = tab.icon;
+                  const isActive = activeTab === tab.id;
+
+                  return (
+                    <button key={tab.id} type="button" onClick={() => setActiveTab(tab.id)} className={`relative flex shrink-0 cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-2 text-[10px] font-medium transition-all duration-300 sm:gap-2 sm:px-3 sm:py-2.5 sm:text-xs md:px-4 md:text-sm ${isActive ? "text-white" : "text-slate-500 hover:text-slate-200"}`}>
+                      {isActive && <motion.div layoutId="about-tab" className="absolute inset-0 rounded-lg border border-blue-400/20 bg-blue-500/10" />}
+                      <Icon size={14} className={`relative z-10 shrink-0 sm:size-[15px] ${isActive ? "text-cyan-400" : "text-slate-500"}`} />
+                      <span className="relative z-10 whitespace-nowrap">{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="min-h-0 w-full">
+              <AnimatePresence mode="wait">
+                {activeTab === "education" && (
+                  <motion.div key="education" variants={contentVariants} initial="hidden" animate="visible" exit="exit" className="w-full">
+                    <BorderGlow {...glowProps} animated={true} className="w-full">
+                      <div className="rounded-[17px] bg-[#0B0E13] p-4 sm:p-6 md:p-7 lg:p-8">
+                        <div className="flex flex-col gap-4 sm:gap-5 md:flex-row md:items-start md:justify-between">
+                          <div className="min-w-0">
+                            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 text-blue-300 sm:mb-4 sm:h-11 sm:w-11"><GraduationCap size={21} /></div>
+                            <h3 className="text-lg font-semibold leading-tight text-white sm:text-xl md:text-2xl">BS Computer Science</h3>
+                            <p className="mt-2 text-xs font-medium text-cyan-400 sm:text-sm">University of Sargodha (SU)</p>
+                          </div>
+                          <div className="flex w-fit shrink-0 items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1.5 font-mono text-[10px] text-slate-400 sm:px-3 sm:text-xs"><Calendar size={12} /> 2024 - 2028</div>
+                        </div>
+
+                        <div className="mt-5 grid grid-cols-1 gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4">
+                          <div className="rounded-xl border border-white/[0.07] bg-black/20 p-3.5 sm:p-4">
+                            <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-600 sm:text-[10px]">Location</p>
+                            <p className="mt-2 flex items-center gap-2 text-xs text-slate-300 sm:text-sm"><MapPin size={14} className="shrink-0 text-blue-400" /> Sargodha, Pakistan</p>
+                          </div>
+                          <div className="rounded-xl border border-white/[0.07] bg-black/20 p-3.5 sm:p-4">
+                            <p className="text-[9px] font-semibold uppercase tracking-wider text-slate-600 sm:text-[10px]">Focus</p>
+                            <p className="mt-2 flex items-center gap-2 text-xs text-slate-300 sm:text-sm"><CheckCircle2 size={14} className="shrink-0 text-cyan-400" /> Computer Science</p>
+                          </div>
+                        </div>
+
+                        <p className="mt-5 text-xs leading-6 text-slate-400 sm:mt-6 sm:text-sm sm:leading-7 md:text-base">
+                          Academic work in computer science supports my production experience in frontend architecture, backend APIs, databases, authentication, and maintainable application design.
+                        </p>
+
+                        <div className="mt-5 border-t border-white/[0.07] pt-5 sm:mt-6 sm:pt-6">
+                          <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600 sm:text-xs">Current Focus</p>
+                          <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
+                            {["MERN Stack", "Laravel MVC", "Database Design", "REST APIs", "Payment Systems"].map((item) => <span key={item} className="rounded-md border border-blue-400/10 bg-blue-500/[0.05] px-2.5 py-1.5 text-[10px] text-slate-400 sm:px-3 sm:text-xs">{item}</span>)}
+                          </div>
+                        </div>
+                      </div>
+                    </BorderGlow>
+                  </motion.div>
+                )}
+
+                {activeTab === "experience" && (
+                  <motion.div key="experience" variants={contentVariants} initial="hidden" animate="visible" exit="exit" className="w-full">
+                    <BorderGlow {...glowProps} animated={true} className="w-full">
+                      <div className="rounded-[17px] bg-[#0B0E13] p-4 sm:p-6 md:p-7 lg:p-8">
+                        <div className="space-y-6">
+                          <div className="flex items-start gap-3 sm:gap-4">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 sm:h-11 sm:w-11"><BriefcaseBusiness size={20} /></div>
+                            <div className="min-w-0 flex-1">
+                              <div className="flex flex-col justify-between gap-3 sm:gap-2 md:flex-row">
+                                <div className="min-w-0">
+                                  <h3 className="text-lg font-semibold text-white sm:text-xl">Full Stack Engineer (MERN Stack & Laravel)</h3>
+                                  <p className="mt-1 text-xs text-cyan-400 sm:text-sm">Exlon Tech - Full-time, On-site</p>
+                                </div>
+                                <span className="flex h-fit w-fit shrink-0 items-center gap-2 rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1.5 font-mono text-[10px] text-slate-500 sm:px-3 sm:text-xs"><Calendar size={12} /> Sep 2025 - Present</span>
+                              </div>
+                              <p className="mt-4 text-xs leading-6 text-slate-400 sm:text-sm sm:leading-7 md:text-base">
+                                Building production web applications across React, Node.js, Express, MongoDB, Laravel, and PHP for real client and company products.
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="grid grid-cols-1 gap-2.5 border-t border-white/[0.07] pt-5 sm:grid-cols-2 sm:gap-3">
+                            {["Multi-vendor marketplace modules", "Order, booking, and payment workflows", "Vendor/customer/admin dashboards", "Norwegian multilingual support", "Database design and API integrations", "Laravel MVC and Eloquent ORM"].map((item) => (
+                              <div key={item} className="flex items-center gap-2.5 rounded-lg border border-white/[0.07] bg-black/20 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3">
+                                <CheckCircle2 size={14} className="shrink-0 text-blue-400" />
+                                <span className="text-xs text-slate-300 sm:text-sm">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+
+                          <div className="rounded-xl border border-white/[0.07] bg-black/20 p-4">
+                            <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+                              <div>
+                                <h4 className="text-sm font-semibold text-white">React Frontend Developer Intern</h4>
+                                <p className="mt-1 text-xs text-cyan-400">Exlon Tech - Jun 2025 to Sep 2025</p>
+                              </div>
+                              <span className="text-[10px] text-slate-500">Sargodha, Punjab, Pakistan</span>
+                            </div>
+                            <p className="mt-3 text-xs leading-6 text-slate-400 sm:text-sm">
+                              Built responsive, high-performance, SEO-friendly interfaces with React.js, JavaScript, Tailwind CSS, REST API integrations, Git/GitHub workflows, and reusable frontend architecture.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </BorderGlow>
+                  </motion.div>
+                )}
+
+                {activeTab === "skills" && (
+                  <motion.div key="skills" variants={contentVariants} initial="hidden" animate="visible" exit="exit">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+                      {skills.map((skill) => {
+                        const Icon = skill.icon;
+                        return (
+                          <BorderGlow key={skill.name} {...glowProps} glowRadius={25} borderRadius={16} glowIntensity={0.65} className="w-full">
+                            <div className="rounded-[15px] bg-[#0B0E13] p-4 sm:p-5">
+                              <div className="flex items-center justify-between gap-3">
+                                <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+                                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-blue-400/10 bg-blue-500/[0.06] sm:h-10 sm:w-10"><Icon size={18} className="text-blue-400" /></div>
+                                  <div className="min-w-0"><h4 className="truncate text-xs font-medium text-white sm:text-sm">{skill.name}</h4><p className="mt-0.5 text-[9px] text-slate-600 sm:text-[10px]">{skill.level}</p></div>
+                                </div>
+                                <span className="shrink-0 font-mono text-[10px] text-slate-500 sm:text-xs">{skill.percentage}%</span>
+                              </div>
+                              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/[0.06] sm:mt-4"><motion.div initial={{ width: 0 }} whileInView={{ width: `${skill.percentage}%` }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-400" /></div>
+                            </div>
+                          </BorderGlow>
+                        );
+                      })}
+                    </div>
+
+                    <BorderGlow {...glowProps} glowRadius={25} borderRadius={16} glowIntensity={0.55} className="mt-4 w-full sm:mt-5">
+                      <div className="rounded-[15px] bg-[#0B0E13] p-4 sm:p-5">
+                        <p className="font-mono text-[9px] uppercase tracking-wider text-slate-600 sm:text-[10px]">Also Experienced With</p>
+                        <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
+                          {["Next.js", "Redux", "Socket.io", "Authentication", "Admin Dashboards", "Google Pay", "Apple Pay", "n8n", "Make.com", "EHF e-invoicing"].map((item) => <span key={item} className="rounded-md border border-white/[0.07] bg-black/20 px-2.5 py-1.5 text-[10px] text-slate-400 sm:px-3 sm:text-xs">{item}</span>)}
+                        </div>
+                      </div>
+                    </BorderGlow>
+                  </motion.div>
+                )}
+
+                {activeTab === "tools" && (
+                  <motion.div key="tools" variants={contentVariants} initial="hidden" animate="visible" exit="exit">
+                    <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-3 md:grid-cols-2 lg:grid-cols-3">
+                      {tools.map((tool) => {
+                        const Icon = tool.icon;
+                        return (
+                          <BorderGlow key={tool.name} {...glowProps} glowRadius={22} borderRadius={15} glowIntensity={0.55} className="w-full">
+                            <div className="group flex items-center gap-2.5 rounded-[14px] bg-[#0B0E13] p-3.5 sm:gap-3 sm:p-4">
+                              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/[0.07] bg-black/20 text-slate-400 transition-colors duration-300 group-hover:border-blue-400/20 group-hover:text-blue-400 sm:h-10 sm:w-10"><Icon size={18} /></div>
+                              <div className="min-w-0"><p className="truncate text-xs font-medium text-slate-200 sm:text-sm">{tool.name}</p><p className="mt-0.5 truncate text-[9px] uppercase tracking-wider text-slate-600 sm:text-[10px]">{tool.category}</p></div>
+                            </div>
+                          </BorderGlow>
+                        );
+                      })}
+                    </div>
+
+                    <BorderGlow {...glowProps} glowRadius={25} borderRadius={16} glowIntensity={0.55} className="mt-4 w-full sm:mt-5">
+                      <div className="flex items-start gap-3 rounded-[15px] bg-[#0B0E13] p-4 sm:p-5">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 sm:h-10 sm:w-10"><Code2 size={18} /></div>
+                        <div className="min-w-0"><p className="text-xs font-medium text-white sm:text-sm">Automation and integrations</p><p className="mt-1 text-[10px] leading-5 text-slate-500 sm:text-xs">I also build AI-driven workflow automation using n8n and Make.com to reduce manual process overhead without requiring a full custom build.</p></div>
+                      </div>
+                    </BorderGlow>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mt-6 sm:mt-7 md:mt-8">
+          <BorderGlow {...glowProps} glowRadius={35} borderRadius={18} glowIntensity={0.6} className="w-full">
+            <div className="flex flex-col items-center justify-between gap-4 rounded-[17px] bg-[#0B0E13] p-4 text-center sm:p-5 md:flex-row md:gap-5 md:p-6 md:text-left">
+              <div className="min-w-0">
+                <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-blue-400 sm:text-[10px] sm:tracking-[0.18em]">Open to opportunities</p>
+                <h3 className="mt-1.5 text-base font-semibold text-white sm:mt-2 sm:text-lg md:text-xl">Full-time, remote, freelance, and contract work</h3>
+                <p className="mt-1 text-xs text-slate-500 sm:text-sm">Let's build a production-ready platform, API, dashboard, or automation workflow.</p>
+              </div>
+
+              <a href="#contact" className="group flex w-full shrink-0 items-center justify-center gap-2 rounded-lg border border-blue-400/20 bg-blue-500/10 px-4 py-2.5 text-xs font-semibold text-blue-300 transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500/15 hover:text-blue-200 sm:w-fit sm:px-5 sm:py-3 sm:text-sm">
+                Let's Talk
+                <ExternalLink size={14} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+            </div>
+          </BorderGlow>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
+
+
+
+
+
+
+
